@@ -101,7 +101,7 @@ Utilizando JavaScript.
 * La tercera forma es crear un archivo externo con nuestro codigo Javascript e utilizarlo a lo largo del codigo html cuando lo necesitemos, asi si queremos cambiar algo del Javascript lo haremos en un solo sitio. Nuestro archivo tendrá la extension .js y lo podremos crear con cualquier editor de texto.  
 Ejemplo:
 ```html
-alert('Hola Mundo!');<--- Esto seria nuestro archivo .js
+alert('Hola Mundo!'); /*Esto seria nuestro archivo .js*/
 	
 <html>
 <head>
@@ -134,7 +134,7 @@ Ejemplos de uso:
 ```html
 selector:pseudo-clase { 
     propiedad:valor;
-}<--- La sintaxis de una pseudoclase.
+} /*La sintaxis de una pseudoclase.*/
 div:hover {
   background-color: #F89B4D;
 }
@@ -165,17 +165,17 @@ Los selectores mas utilizados:
 
 ### Di a quien afectan:
 ```html
-    p a { color: red; } <--- Afectan a todos los enlaces que esten en el parrafo. 
+    p a { color: red; } /* Afectan a todos los enlaces que esten en el parrafo. */
 
-    p > a { color: red; } <--- Afecta a el primer enlace que se encuentre en la etiqueta p, o con la etiqueta p. Es decir, que sean hijos directos.
+    p > a { color: red; } /*Afecta a el primer enlace que se encuentre en la etiqueta p, o con la etiqueta p. Es decir, que sean hijos directos.*/
 
-    h1 + h2 { color: red } <--- Afecta a el h2 que se encuentra directamente despues del h1.
+    h1 + h2 { color: red } /*Afecta a el h2 que se encuentra directamente despues del h1.*/
 
-    a[class] { color: blue; } <--- Afecta a todas las clases definidas.
+    a[class] { color: blue; } /* Afecta a todas las clases definidas.*/
 
-    a[class="externo"] { color: blue; } <--- Afecta a la clase "externo".
+    a[class="externo"] { color: blue; }/* Afecta a la clase "externo".*/
 
-    a[href="http://www.ejemplo.com"] { color: blue; } <--- Afecta a el enlace.
+    a[href="http://www.ejemplo.com"] { color: blue; } /* Afecta a el enlace.*/
 ```
 
 

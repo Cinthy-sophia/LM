@@ -132,9 +132,10 @@ Existen muchisimos más elementos que podemos utilizar para darles un estilo a n
 Ejemplos de uso:
 
 ```html
+/*La sintaxis de una pseudoclase.*/
 selector:pseudo-clase { 
     propiedad:valor;
-} /*La sintaxis de una pseudoclase.*/
+} 
 div:hover {
   background-color: #F89B4D;
 }

@@ -60,13 +60,13 @@ Donde "mi_estilo.css" es nuestra hoja externa con los estilos en css definidos e
 Cuando en un navegador introducimos la URL de un sitio web, se hace una petición al servidor en el que se encuentra, para que devuelva la información que debe aparecer en el navegador web. Esta información se devuelve en código HTML que el navegador se encarga de interpretar y pintar. Esto significa que si deseamos que el navegador interprete Javascript hay que indicarle al navegador que hay un codigo Javascript y que queremos que se ejecute. Esta indicación irá en codigo HTML ya que eso es lo unico que el navegador entiende y recibe.
 
 Tal como en css, para añadir Javascript a nuestro codigo html existen 3 formas:  
-* La primera de ellas es introducir el Javascript en las etiquetas de html que precisemos. Esta forma es la que menos se utiliza ya que es muy complicado mantener el codigo.  
+* La primera de ellas es introducir el Javascript en las etiquetas de html que precisemos. Esta forma es la que menos se utiliza ya que es muy complicado mantener el codigo, y lo hace dificil de entender.    
 Ejemplo:
 ```html
 <span onclick="alert('Hola Mundo!')">Haz click aquí</span>
 ```
 
-* La segunda, como lo hacemos con el css, es crear una etiqueta que se llame script en la cabecera del documento e introducir el Javascript que queremos que aparezca en nuestro sitio web. Cabe resaltalr que la etiqueta scriptse ùede coclocar a lo largo de el codigo html pero es más recomendable colocarlo en la cabecera.  
+* La segunda,como lo hacemos en css, es crear una etiqueta que se llame script en la cabecera del documento e introducir el Javascript que queremos que aparezca en nuestro sitio web. Cabe resaltar que la etiqueta script se puede colocar a lo largo de el codigo html pero es más recomendable colocarlo en la cabecera.  
 Ejemplo:  
 ```html
 <html>
@@ -77,11 +77,11 @@ Ejemplo:
     </script>
 </head>
 <body>
-Bienvenido a JavaScript.
+Utilizando JavaScript.
 </body>
 </html>
 ```
-* La tercera forma es crear un archivo externo con nuestro codigo html e utilizarlo a lo largo del codigo cuando lo necesitemos, asi si queremos cambiar algo del Javascript lo haremos en un solo sitio. NUesto archivo tendrá la extension .js y lo podremos crear con cualquier editor de texto.  
+* La tercera forma es crear un archivo externo con nuestro codigo Javascript e utilizarlo a lo largo del codigo html cuando lo necesitemos, asi si queremos cambiar algo del Javascript lo haremos en un solo sitio. Nuestro archivo tendrá la extension .js y lo podremos crear con cualquier editor de texto.  
 Ejemplo:
 ```html
 alert('Hola Mundo!');<--- Esto seria nuestro archivo .js
@@ -92,10 +92,101 @@ alert('Hola Mundo!');<--- Esto seria nuestro archivo .js
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-Bienvenido a JavaScript.
+Utilizando JavaScript.
 </body>
 </html>
 ```
+### Diferencias entre una clase y una ID:
+La diferencia esta en que las ID están pensadas para que el elemento al que se le aplique sea el único en tenerla. Es decir, que sólo se le puede asignar un identificador a un unico elemento de la página, y este no puede ser añadido en otros elementos.
+
+Por otro lado, las clases son totalmente lo opuesto. Ellas están pensadas para poder definir un mismo estilo a varios elementos de la página. Es decir, se puede asignar una misma clase a varios elementos de la página.
+
+### Código para hacer un enlace a otra página y que esta se abra en una nueva ventana.
+
+### ¿Que son las pseudoclases? y sus ejemplos.
+Las pseudoclases son palabras claves que se utlizan para definirle un estilo especial a un selector y que especifica un estado del navegador o del elemento en concreto. Estas poseen pseudoelementos que son los que nos permiten aplicar los estilos. Ejemplos de estos pseudoelementos son:  
+- *:hover* que aplicara un estilo cuando el usuario pose el raton en el elemento.
+- *:visited* que nos permite ver el historial del navegador.
+- *:checked* que nos permite ver el estado de el contenido del navegador.  
+Existen muchisimos más elementos que podemos utilizar para darles un estilo a nuestros elementos.  
+Ejemplos de uso:
+
+```html
+selector:pseudo-clase { 
+    propiedad:valor;
+}<--- La sintaxis de una pseudoclase.
+div:hover {
+  background-color: #F89B4D;
+}
+a:visited {
+    color: #00FF00;
+}
+```
+### Explica el modelo de caja de CSS (margin, border y padding):
+Para aplicar css a un elemento en html lo principal es colocarle la etiqueta de inline-block, ya que con ella podemos añadirle estilos pero tambien anchura y altura a los elementos que queramos. El margin nos sirve para darles un margen externo o para centralos en el body, cabe resaltar que el tamaño de la caja no seria solo lo que le asignemos al crearla, a ello le añadiremos tambien lo que le agreguemos de margin y demás. El border nos permite resaltar el borde del elemento y colocarlo con el estilo que queramos, puede ser tanto punteado como simple, y podemos ademas añadirle el color que queramos. El padding nos permite darle un margen interno al contenido de la caja y centrarlo si es necesario.
+
+### Explica que son los selectores de CSS y pon ejemplos:
+Los selectores nos permiten identificar un elemento dentro de el codigo html, para luego poder definir sus propiedades o estilos.  
+Los selectores mas utilizados:
+* **Selectores de clase:** Selecciona todos los elementos dado un atributo de clas.
+    Sintáxis: .classname
+    Ejemplo: .index se aplicará a cualquier elemento que tenga la clase "index".
+* **Selectores de ID:** Selecciona un elemento basándose en el valor de su atributo id. Debería existir únicamente un elemento con un ID dado en un documento.
+    Sintáxis: #idname
+    Ejemplo: #toc se aplicará a cualquier elemento que tenga el ID "toc".
+* **Selector universal:** Selecciona todos los elementos. Puede estar restringido a un espacio de nombres o a todos los espacios de nombres.
+    Sintáxis: * ns|* *|*
+    Ejemplo: * se aplicará a todos los elementos del documento.
+    
+* **Selectores de atributo:** Selecciona elementos basándose en el valor de un atributo dado.
+    Sintáxis: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]
+    Ejemplo: [autoplay] se aplicará a todos los elementos que tengan el atributo "autoplay" asignado (a cualquier valor).
+
+
+### Di a quien afectan:
+```html
+    p a { color: red; } <--- Aplica el color rojo a todas las 'a' que se encuentren en el parrafo "p". 
+
+    p > a { color: red; } <--- Aplica el color rojo.
+
+    h1 + h2 { color: red } <---APlica el color rojo.
+
+    a[class] { color: blue; } <--- Aplica el color azul a todas las clases definidas.
+
+    a[class="externo"] { color: blue; } <--- Aplica el color azul a la clase "externo".
+
+    a[href="http://www.ejemplo.com"] { color: blue; } <--- El link se mostrará en color azul.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -167,7 +167,7 @@ Los selectores mas utilizados:
 ```html
     p a { color: red; } <--- Afectan a todos los enlaces que esten en el parrafo. 
 
-    p > a { color: red; } <--- Afecat a el primer enlace que se encuentre en la etiqueta p, o con la etiqueta p. Es decir, que sean         hijos directos.
+    p > a { color: red; } <--- Afecta a el primer enlace que se encuentre en la etiqueta p, o con la etiqueta p. Es decir, que sean hijos directos.
 
     h1 + h2 { color: red } <--- Afecta a el h2 que se encuentra directamente despues del h1.
 

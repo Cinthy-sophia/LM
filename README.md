@@ -1,5 +1,5 @@
 # LM
-Lenguaje de Marcas. Ejercicios en clase.
+## Lenguaje de Marcas. Ejercicios en clase.
 
 ### Estructura minima de una web:
 
@@ -55,6 +55,23 @@ Para crear la hoja externa solo hace falta escribir en ella como lo hemos hecho 
 Donde "mi_estilo.css" es nuestra hoja externa con los estilos en css definidos en ella.
 
 ### Lista sin ordenar con 5 ingredientes de una receta de cocina:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title> Bizcocho de chocolate </title>
+</head>
+<body>
+	<ul> 
+		1. Harina
+		2. Leche
+		3. Huevos
+		4. Azucar
+		5. Chocolate
+	</ul>
+</body>
+</html>
+```
 
 ### Como incluir javascript en html:
 Cuando en un navegador introducimos la URL de un sitio web, se hace una petición al servidor en el que se encuentra, para que devuelva la información que debe aparecer en el navegador web. Esta información se devuelve en código HTML que el navegador se encarga de interpretar y pintar. Esto significa que si deseamos que el navegador interprete Javascript hay que indicarle al navegador que hay un codigo Javascript y que queremos que se ejecute. Esta indicación irá en codigo HTML ya que eso es lo unico que el navegador entiende y recibe.
@@ -101,7 +118,10 @@ La diferencia esta en que las ID están pensadas para que el elemento al que se 
 
 Por otro lado, las clases son totalmente lo opuesto. Ellas están pensadas para poder definir un mismo estilo a varios elementos de la página. Es decir, se puede asignar una misma clase a varios elementos de la página.
 
-### Código para hacer un enlace a otra página y que esta se abra en una nueva ventana.
+### Código para hacer un enlace a otra página y que esta se abra en una nueva ventana:
+```html
+<a href="http://sitioweb.com/" target="_blank">Esto es un sitio web</a>
+```
 
 ### ¿Que son las pseudoclases? y sus ejemplos.
 Las pseudoclases son palabras claves que se utlizan para definirle un estilo especial a un selector y que especifica un estado del navegador o del elemento en concreto. Estas poseen pseudoelementos que son los que nos permiten aplicar los estilos. Ejemplos de estos pseudoelementos son:  
@@ -145,63 +165,18 @@ Los selectores mas utilizados:
 
 ### Di a quien afectan:
 ```html
-    p a { color: red; } <--- Aplica el color rojo a todas las 'a' que se encuentren en el parrafo "p". 
+    p a { color: red; } <--- Afectan a todo el parrafo. 
 
-    p > a { color: red; } <--- Aplica el color rojo.
+    p > a { color: red; } <--- No afecta a nada.
 
-    h1 + h2 { color: red } <---APlica el color rojo.
+    h1 + h2 { color: red } <---No afecta a nada.
 
-    a[class] { color: blue; } <--- Aplica el color azul a todas las clases definidas.
+    a[class] { color: blue; } <--- Afecta a todas las clases definidas.
 
-    a[class="externo"] { color: blue; } <--- Aplica el color azul a la clase "externo".
+    a[class="externo"] { color: blue; } <--- Afecta a la clase "externo".
 
-    a[href="http://www.ejemplo.com"] { color: blue; } <--- El link se mostrará en color azul.
+    a[href="http://www.ejemplo.com"] { color: blue; } <--- Afecta a el link.
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

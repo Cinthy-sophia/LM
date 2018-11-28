@@ -63,11 +63,11 @@ Donde "mi_estilo.css" es nuestra hoja externa con los estilos en css definidos e
 </head>
 <body>
 	<ul> 
-		1. Harina
-		2. Leche
-		3. Huevos
-		4. Azucar
-		5. Chocolate
+		<li>1. Harina</li>
+		<li>2. Leche</li>
+		<li>3. Huevos</li>
+		<li>4. Azucar</li>
+		<li>5. Chocolate</li>
 	</ul>
 </body>
 </html>

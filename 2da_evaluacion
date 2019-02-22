@@ -1,1 +1,2 @@
-
+## 1. Electron JS y sus ejemplos
+Electron.js es una plataforma para desarrollar aplicaciones de escritorio usando tecnologías web (HTML, CSS y JavaScript) creada y mantenida por Github. Electron.js funciona creando dos tipos de procesos, el proceso main y el proceso renderer. El primero es un proceso de Node.js, este es nuestro proceso principal, viene a ser nuestra aplicación en si misma, este proceso tiene acceso a varias API de Electron.js solo para este proceso que nos ayudan a comunicarnos con el SO y realizar distintas acciones o efectos.

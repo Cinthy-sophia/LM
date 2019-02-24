@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Calculadora de propinas</title>
+    <style>
+        div{
+            border: 2px solid black;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+    PRECIO: <input type="text" id="precio">
+    <input type="button" id="botonCalcular" value="Calcular la propina">
+    <input type="text" id="propinas">
+
+    <script type="text/javascript">
+        document.getElementById("botonCalcular").addEventListener("click", calculaPropinas);
+
+        function calculaPropinas() {
+            console.log("hello");
+            var precio;
+            precio= document.getElementById("precio").value;
+            if (precio<50) {
+                document.getElementById("propinas").value=(precio*(20/100));
+                
+            } else if(precio>50&&precio<200){
+                document.getElementById("propinas").value=(precio*(15/100));
+            } else{
+                document.getElementById("propinas").value=(precio*(10/100));
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>

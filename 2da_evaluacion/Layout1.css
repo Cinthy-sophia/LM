@@ -1,0 +1,31 @@
+.container{
+    padding: 30px 50px 30px 50px; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+  }
+  .box{
+    width: 300px;
+    height: 400px;
+    padding:20px;
+    text-align: justify;
+    font-size: 14px;
+    border: 1px solid grey;
+    color: black;
+    background-color: white;
+  }
+
+  html{
+    background-color: cadetblue;    
+  }
+  .box1{
+    padding: 10px;
+    display: inline-block;
+    border: 1px;
+    background-color: rgb(228, 227, 227);
+  }

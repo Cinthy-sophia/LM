@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liga ACB</title>
+    <style>
+        body{
+            background-color: khaki;
+        }
+        #titulo{
+            display: inline-block;
+            color: rgb(56, 4, 4);
+            background-color: coral;
+            font-size: 25px;
+            margin-left: 570px;
+            margin-bottom: 50px;
+        }
+        #equipo1 {
+            display: flex;
+            border: 1px solid black;
+            width: 500px;
+            background-color:lemonchiffon;
+            margin: 0px 300px 0px 20px;
+            text-align: justify;
+            padding: 5px;
+            
+
+        }
+        #equipo2{
+            display: flex;
+            
+            float: right;
+            border: 1px solid black;
+            width: 500px;
+            background-color:lemonchiffon;
+            margin: -69px 250px 0px 20px;
+            text-align: justify;
+            padding: 5px;
+        }
+        input{
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        h3{
+            margin: 0px 300px 10px 20px;
+        }
+        #subtitulo2{
+            float:right;
+            margin: -102px 465px 0px 20px;
+  
+        }
+        #imagen2{
+            float:right;
+            margin: -162px 360px 0px 20px;
+            width: 70px;
+        }
+        #imagen1{
+            float:right;
+            margin: -160px 930px 0px 20px;
+            width: 70px;
+        }
+        img{
+            border: 1px solid gray;
+        }
+        
+        
+    </style>
+    
+</head>
+<body>
+    
+
+
+    <div id="titulo"><h2>Liga ACB</h2></div>
+    <h3>Equipo 1: Iberostar Tenerife</h3>
+    <div id="equipo1"> 
+    
+        Iberostar Tenerife vs Fuenlabrada	96 : 65 GANADOR	<br>	 
+        
+        Iberostar Tenerife vs	Reyer Venezia	78 : 80	PERDEDOR <br>	 
+        
+        UCAM Murcia	 vs Iberostar Tenerife	91 : 96 GANADOR
+        
+    </div>
+    <img id="imagen1" src="http://static.acb.com/web/fotos/1/0/1/1/5/101156_2_14594_2.jpg"/>
+    <h3 id="subtitulo2">Equipo 2: Kirolbet Baskonia</h3>
+    <div id="equipo2">
+        
+        
+        Baskonia vs Barcelona	73 : 82	PERDEDOR<br>	 
+        
+        Baskonia vs	Olimpia Milano	80 : 75	GANADOR<br>	 
+        
+        Joventut vs Baskonia	67 : 68	GANADOR
+    </div>
+    <img id="imagen2" src="http://static.acb.com/web/fotos/1/5/8/6/2/158621_2_190430_2.jpg"/>
+
+
+        <input type="button" id="botonCalcular" value="Calcular">
+        GANADOR: <input type="text" id="Ganador">
+        PUNTOS: <input type="text" id="Puntos">
+        
+    
+        <script type="text/javascript">
+            document.getElementById("botonCalcular").addEventListener("click", calculaPuntos);
+    
+            function calculaPuntos() {
+                console.log("altura");
+                document.getElementById("Ganador").value="Iberostar Tenerife";
+                document.getElementById("Puntos").value=(270);
+            }
+            
+        </script>
+    
+</body>
+</html>
